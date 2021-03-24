@@ -1,5 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
+import 'models/models.dart';
 import 'ui/pages/pages.dart';
 
 void main() {
@@ -12,7 +13,9 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       // Set the start page of the app
-      home: MainPage(),
+      home: FoodDetailsPage(
+        transaction: Transaction(food: mockFoods[0]),
+      ),
     );
   }
 }
