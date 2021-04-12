@@ -13,7 +13,7 @@ class MyApp extends StatelessWidget {
     return GetMaterialApp(
       debugShowCheckedModeBanner: false,
       // Set the start page of the app
-      home: SuccessSignUpPage(),
+      home: MainPage(),
     );
   }
 }
