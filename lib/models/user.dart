@@ -34,4 +34,5 @@ User mockUser = User(
     phoneNumber: '085614045',
     email: 'gemblung@banget.com',
     picturePath:
-        'https://www.google.com/url?sa=i&url=https%3A%2F%2Fwww.facetofeet.com%2Fk-wave%2F13779%2Fsetelah-blackpink-dua-lipa-akan-kolaborasi-dengan-member-mamamoo-ini&psig=AOvVaw2WTLfJwumpxdVZzmM6lZTh&ust=1616577069046000&source=images&cd=vfe&ved=0CAIQjRxqFwoTCMC00oWJxu8CFQAAAAAdAAAAABAD');
+        //'https://i.pinimg.com/474x/8a/f4/7e/8af47e18b14b741f6be2ae499d23fcbe.jpg');
+        'https://hips.hearstapps.com/hmg-prod.s3.amazonaws.com/images/dua-lipa-attends-varietys-2nd-annual-hitmakers-brunch-at-news-photo-1604677508.?crop=1xw:0.87967xh;center,top&resize=640:*');
