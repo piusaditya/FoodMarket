@@ -16,9 +16,9 @@ class UserServices {
       client = http.Client();
     }
 
-    String url = baseUrl = 'register';
+    String url = baseURL + 'register';
 
-    var response = await client.post(url,
+    var response = await client.post(Uri.parse(url),
         headers: {"Content-Type": "application/json"},
         body: jsonEncode(<String, String>{
           'name': user.name,
@@ -38,7 +38,7 @@ class UserServices {
     var data = jsonDecode(response.body);
 
     User.token = data['data']['access_token'];
-    User value = data['data']['user'];
+    User value = User.fromJson(data['data']['user']);
 
 //todo: Upload Profile Picture
     if (pictureFile != null) {
@@ -57,7 +57,7 @@ class UserServices {
 
   static Future<ApiReturnValue<String>> uploadProfilePicture(File pictureFile,
       {http.MultipartRequest request}) async {
-    String url = baseUrl = 'user.photo';
+    String url = baseURL + 'user/photo';
     var uri = Uri.parse(url);
 
     if (request == null) {
