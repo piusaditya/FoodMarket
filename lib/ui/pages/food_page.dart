@@ -71,7 +71,7 @@ class _FoodPageState extends State<FoodPage> {
                             children: state.foods
                                 .map((e) => Padding(
                                       padding: EdgeInsets.only(
-                                          left: (e == mockFoods.first)
+                                          left: (e == state.foods.first)
                                               ? defaultMargin
                                               : 0,
                                           right: defaultMargin),
@@ -133,22 +133,20 @@ class _FoodPageState extends State<FoodPage> {
                                     defaultMargin,
                                     16),
                                 child: GestureDetector(
-                                  onTap: (){
+                                  onTap: () {
                                     Get.to(FoodDetailsPage(
                                       transaction: Transaction(
-                                                  food: e,
-                                                  user: (context
-                                                          .bloc<UserCubit>()
-                                                          .state as UserLoaded)
-                                                      .user),
-                                              onBackButtonPressed: () {
-                                                Get.back();
-                                              },
+                                          food: e,
+                                          user: (context.bloc<UserCubit>().state
+                                                  as UserLoaded)
+                                              .user),
+                                      onBackButtonPressed: () {
+                                        Get.back();
+                                      },
                                     ));
                                   },
                                   child: FoodListItem(
-                                      food: e,
-                                      itemWidth: listItemWidth),
+                                      food: e, itemWidth: listItemWidth),
                                 ), // list makanan
                               ))
                           .toList(),
